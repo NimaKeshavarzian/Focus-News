@@ -1,0 +1,32 @@
+#pageFooter {
+    width: 100%;
+    height: 10em;
+    position: relative;
+    top: 2em;
+    background: var(--footerBgColor);
+    padding-right: 0.5em;
+    font: italic 1.15rem 'dirooz', georgia;
+    color: var(--primaryColor);
+}
+
+#categories {
+    width: 100%;
+    height: 50%;
+}
+
+#socialMedia {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkToSocialMedia {
+    width: 3em;
+    height: 3em;
+    margin-right: 0.2em;
+    border-radius: 18px;
+    background: rgb(69, 69, 69);
+}

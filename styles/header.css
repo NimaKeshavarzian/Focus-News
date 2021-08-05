@@ -1,0 +1,44 @@
+#pageHeader {
+    width: 100%;
+    height: 2.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    z-index: 10;
+    background: var(--primaryColor);
+    color: var(--primaryTextColor);
+}
+
+#pageHeader::-webkit-scrollbar {
+    display: none;
+}
+
+#pageHeader * {
+    color: var(--primaryTextColor);
+}
+
+#pageTitle {
+    width: 70%;
+    padding-right: 0.75em;
+    float: right;
+    font: normal normal 400 2.4em 'b elham', georgia;
+}
+
+#pageTools {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+#pageTools img {
+    width: 33.3%;
+    height: 80%;
+    cursor: pointer;
+}

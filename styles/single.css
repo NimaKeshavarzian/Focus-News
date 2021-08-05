@@ -1,0 +1,249 @@
+#pageHeader {
+    border-bottom: var(--borderStyle);
+}
+
+article {
+    width: 100%;
+    height: auto;
+    background: var(--primaryColor);
+}
+
+#articleInformation {
+    width: 100%;
+    max-height: 70%;
+    position: relative;
+    top: 2.5em;
+    border-bottom: 1px solid var(--primaryBorderColor);
+    overflow: hidden;
+}
+
+#articleInformation * {
+    width: inherit;
+}
+
+#articleImageContainer {
+    height: 40%;
+}
+
+#articleImageContainer img {
+    height: 100%;
+}
+
+#articleCategories {
+    max-height: 4em;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.articleCategory {
+    min-width: 15%;
+    max-width: 25%;
+    height: 1.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.2em;
+    margin-bottom: 0.2em;
+    border-radius: 30px;
+    background: royalblue;
+    font: italic bolder 1.2rem 'dirooz';
+    color: var(--primaryColor);
+}
+
+#articleTitle {
+    max-height: 20%;
+    margin-top: 0.3em;
+    font: normal bolder 0.9rem 'dirooz';
+}
+
+#articleDetails {
+    max-height: 10%;
+    font: normal bolder 0.75rem 'dirooz';
+    color: var(--newsDetailsColor);
+}
+
+#articleContent {
+    height: auto;
+    background: var(--primaryColor);
+    position: relative;
+    top: 2.5em;
+    display: flex;
+    flex-flow: column;
+}
+
+#articleContent p {
+    padding: 0.5em;
+    font: normal 1.2rem 'dirooz';
+    color: var(--secondaryTextColor);
+    line-height: 2;
+    text-align: justify;
+}
+
+#tagsContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background: var(--primaryColor);
+    padding-bottom: 0.5em;
+}
+
+#tagsLabel {
+    padding-right: 0.3em;
+    font: normal bolder 1.4rem 'dirooz';
+}
+
+#tags {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    list-style: none;
+}
+
+.tag {
+    min-width: 3em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.1em;
+    border-radius: 5px;
+    box-shadow: 0.003em 0.003em 5px var(--primaryShadowColor);
+    font: italic bold 1.3rem 'dirooz';
+    padding-right: 0.5em;
+}
+
+#commentsContainer {
+    width: 100%;
+    max-height: 60vh;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    top: 2.5em;
+    margin: auto;
+    overflow-y: scroll;
+    background: var(--primaryColor);
+    border-top: 1px solid var(--primaryBorderColor);
+}
+
+#commentsContainer::-webkit-scrollbar {
+    width: 1em;
+}
+
+#commentsTitleContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: normal bolder 1.5rem 'b elham';
+}
+
+#commentsTitle {
+    margin-right: 0.3em;
+}
+
+#commentsNumber {
+    margin-left: 0.3em;
+    font-size: 2.75rem;
+    color: var(--newsDetailsColor);
+}
+
+.comment {
+    width: 100%;
+}
+
+.commentHeader {
+    width: 100%;
+    height: 2.5em;
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 0.5em;
+    border-bottom: 1px solid var(--primaryBorderColor);
+}
+
+.user,
+.commentDate {
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.user {
+    width: 70%;
+}
+
+.user h1 {
+    font: normal bold 1.3rem 'dirooz';
+}
+
+.profileImg {
+    width: 30%;
+    height: 100%;
+}
+
+.commentDate {
+    width: 30%;
+    justify-content: flex-end;
+    font: normal bolder 1.75rem 'b elham';
+    color: var(--newsDetailsColor);
+}
+
+.commentContent {
+    width: 100%;
+    max-height: 15em;
+    overflow-y: scroll;
+    font: normal bold 0.9rem 'dirooz';
+}
+
+.commentContent::-webkit-scrollbar {
+    width: 1em;
+    border-radius: 18px;
+}
+
+.articleTool {
+    box-shadow: 2px 2px 20px var(--primaryShadowColor);
+}
+
+#pageFooter {
+    top: 4em;
+}
+
+@media all and (min-width: 750px) {
+    article {
+        width: 70%;
+        margin: auto;
+        border: 1px solid var(--primaryBorderColor);
+        border-style: none solid;
+    }
+    #articleCategories {
+        top: 70%;
+    }
+    #commentsContainer {
+        width: 70%;
+    }
+    #commentContent {
+        font-size: 10.5rem;
+    }
+}
+
+@media all and (min-width: 900px) {
+    article {
+        width: 75%;
+    }
+    #articleImageContainer {
+        height: 50%;
+    }
+    .articleCategory {
+        min-width: 5%;
+        max-width: 15%;
+    }
+    #commentsContainer {
+        width: 75%;
+    }
+}
