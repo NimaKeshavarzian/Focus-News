@@ -32,7 +32,7 @@ article {
 #articleCategories {
     max-height: 4em;
     position: absolute;
-    top: 50%;
+    top: 52%;
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -151,59 +151,73 @@ article {
     color: var(--newsDetailsColor);
 }
 
-.comment {
+#comments {
     width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment {
+    --primaryShadowColor: rgb(245, 245, 245);
+    width: 90%;
+    height: auto;
+    position: relative;
+    margin-bottom: 1em;
+    border-radius: 18px;
+    box-shadow: 6px 6px 5px var(--primaryShadowColor), -3px -3px 5px var(--primaryShadowColor);
 }
 
 .commentHeader {
     width: 100%;
-    height: 2.5em;
-    display: flex;
-    flex-flow: row;
-    justify-content: start;
-    align-items: flex-start;
-    margin-top: 0.5em;
+    height: 3em;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 0.75em;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    bottom: 1px solid var(--primaryBorderColor);
+    padding-bottom: 3.5em;
     border-bottom: 1px solid var(--primaryBorderColor);
 }
 
-.user,
+.profileAvatar {
+    width: 100%;
+    height: 67%;
+    grid-row: 1/3;
+}
+
+.profileName,
 .commentDate {
-    height: 100%;
-    display: flex;
-    flex-flow: row;
-    align-items: center;
+    font: normal bold 0.8rem 'b elham';
 }
 
-.user {
-    width: 70%;
-}
-
-.user h1 {
-    font: normal bold 1.3rem 'dirooz';
-}
-
-.profileImg {
-    width: 30%;
-    height: 100%;
+.profileName {
+    padding-bottom: 1em;
 }
 
 .commentDate {
-    width: 30%;
-    justify-content: flex-end;
-    font: normal bolder 1.75rem 'b elham';
+    position: relative;
+    bottom: 1.25em;
     color: var(--newsDetailsColor);
 }
 
 .commentContent {
     width: 100%;
-    max-height: 15em;
+    height: auto;
+    max-height: 9em;
     overflow-y: scroll;
-    font: normal bold 0.9rem 'dirooz';
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
 }
 
-.commentContent::-webkit-scrollbar {
-    width: 1em;
-    border-radius: 18px;
+.commentContent p {
+    font: normal 1.1rem 'dirooz';
+    color: var(--secondaryTextColor);
+    text-align: justify;
 }
 
 .articleTool {
@@ -227,8 +241,23 @@ article {
     #commentsContainer {
         width: 70%;
     }
-    #commentContent {
-        font-size: 10.5rem;
+    /* Scroll Bar: */
+    .commentContent::-webkit-scrollbar {
+        width: 1em;
+        background: var(--scrollBarRailColor);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .commentContent {
+        scrollbar-width: 1em;
+        scrollbar-color: var(--scrollBarRailColor);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .commentContent::-webkit-scrollbar-thumb {
+        background: var(--primaryColor);
+        box-shadow: 2px 2px 20px var(--primaryShadowColor);
+        border-radius: 10px;
     }
 }
 

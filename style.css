@@ -1,5 +1,6 @@
 @import url('./styles/header.css');
 @import url('./styles/menu.css');
+@import url('./styles/searchBox.css');
 @import url('./styles/bigNews.css');
 @import url('./styles/advertising.css');
 @import url('./styles/articles.css');
@@ -19,6 +20,7 @@
     --bigNewsTitleColor: var(--primaryColor);
     --newsDetailsColor: var(--primaryBorderColor);
     --articleDetailsColor: rgba(0, 0, 0, 0.7);
+    --scrollBarRailColor: rgb(230, 230, 230);
     --linkFocusColor: rgb(0, 28, 112);
     --footerBgColor: var(--primaryTextColor);
 }
@@ -44,6 +46,11 @@ body {
 
 .hidden {
     display: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
 }
 
 
