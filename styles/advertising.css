@@ -9,5 +9,5 @@
     background: #000;
     border-bottom: 3px solid var(--primaryBorderColor);
     font: italic normal bolder 2em 'dirooz', georgia;
-    color: var(--primaryColor);
+    color: rgb(255, 255, 255);
 }

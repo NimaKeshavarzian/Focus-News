@@ -59,29 +59,3 @@
     color: var(--newsDetailsColor);
     text-align: justify;
 }
-
-#pageNumberContainer {
-    width: 100%;
-    height: 2em;
-}
-
-#pageNumberContainer ul {
-    width: inherit;
-    list-style: none;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#pageNumberContainer li {
-    width: 2rem;
-    height: 100%;
-    font: normal 1.75rem 'b elham', georgia;
-    text-align: center;
-}
-
-#selectedPage {
-    background: var(--primaryBorderColor);
-    color: var(--primaryColor);
-}

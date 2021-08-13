@@ -1,32 +1,141 @@
 #pageFooter {
+    --footerBgColor: rgb(5, 5, 5);
+    --primaryTextColor: rgb(255, 255, 255);
+    --secondaryTextColor: rgb(183, 183, 183);
+}
+
+#pageFooter {
     width: 100%;
-    height: 10em;
+    height: 15em;
     position: relative;
-    top: 2em;
-    background: var(--footerBgColor);
-    padding-right: 0.5em;
-    font: italic 1.15rem 'dirooz', georgia;
-    color: var(--primaryColor);
-}
-
-#categories {
-    width: 100%;
-    height: 50%;
-}
-
-#socialMedia {
-    width: 100%;
-    height: 50%;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
+    margin-top: 7.5em;
+    background: var(--footerBgColor);
+}
+
+#footerHeader {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: var(--primaryTextColor);
+}
+
+#footerHeader h1 {
+    font: normal bold 2rem 'b elham';
+}
+
+#goUpBtn {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Footer menu: */
+
+#footerMenu {
+    width: auto;
+    height: auto;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+#footerMenu * {
+    margin: auto;
+}
+
+#footerMenu ul {
+    width: auto;
+    height: 1.5em;
+    margin: auto;
+    display: unset;
+}
+
+#footerMenu li {
+    min-width: 1em;
+    flex: unset;
+    display: inline;
+    margin: 0.5em;
+    border: none;
+    font: normal bold 1.2rem 'dirooz';
+}
+
+#footerMenu li a {
+    width: auto;
+    height: auto;
+    display: inline;
+}
+
+
+/* Footer Categories: */
+
+#footerCategories {
+    width: 100%;
+    height: auto;
+    margin-top: 1em;
+    text-align: center;
+}
+
+#footerCategories ul {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.linkToSocialMedia {
-    width: 3em;
-    height: 3em;
-    margin-right: 0.2em;
-    border-radius: 18px;
-    background: rgb(69, 69, 69);
+.category {
+    display: inline;
+    flex: 0.12;
+    margin: auto;
+    font: normal 0.9rem 'dirooz';
+    color: var(--secondaryTextColor);
+    list-style: none;
+}
+
+
+/* Mail Box: */
+
+#mailBox {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+#mailBox svg {
+    width: 1em;
+    height: 1em;
+    fill: var(--secondaryTextColor);
+}
+
+#mailBox p {
+    display: inline;
+    float: right;
+    font: normal 1rem georgia;
+    color: var(--primaryTextColor);
+    padding-left: 0.4em;
+}
+
+
+/* Copyright: */
+
+#copyRight {
+    width: 100%;
+    position: absolute;
+    bottom: 0.1em;
+    text-align: center;
+    padding-bottom: 0.4em;
+}
+
+#copyRight p {
+    color: rgb(230, 230, 230);
 }

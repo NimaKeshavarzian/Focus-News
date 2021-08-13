@@ -1,1 +1,44 @@
-.dark
+.dark {
+    --primaryColor: rgb(0, 0, 0);
+    --bgColor: rgb(30, 30, 30);
+    --primaryBorderColor: rgba(77, 77, 77, 0.6);
+    --primaryShadowColor: rgb(48, 48, 48);
+    --txtBgColor: rgba(0, 0, 0, 0.9);
+    --primaryTextColor: rgb(255, 255, 255);
+    --secondaryTextColor: rgb(229, 229, 229);
+    --newsDetailsColor: rgb(155, 155, 155);
+}
+
+
+/* Dark Header: */
+
+.dark #searchIcon {
+    margin-left: 0.2em;
+}
+
+
+/* Dark SearchBox: */
+
+.dark #searchValue {
+    background: var(--primaryColor);
+}
+
+
+/* Dark comments: */
+
+.dark #commentsNumber {
+    color: rgb(232, 232, 232);
+}
+
+.dark .comment {
+    --primaryShadowColor: rgb(14, 14, 14);
+    box-shadow: 4px 4px 5px var(--primaryShadowColor), -3px -3px 5px var(--primaryShadowColor);
+}
+
+.dark .commentContent::-webkit-scrollbar {
+    background: var(--bgColor);
+}
+
+.dark .commentContent::-webkit-scrollbar-thumb {
+    box-shadow: none;
+}

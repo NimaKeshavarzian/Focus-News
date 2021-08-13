@@ -1,4 +1,4 @@
-#menu {
+#menuContainer {
     width: 100%;
     height: 2em;
     position: fixed;
@@ -9,7 +9,7 @@
     border-style: solid none;
 }
 
-#menuItems {
+.menu {
     width: inherit;
     height: 100%;
     display: flex;
@@ -20,23 +20,35 @@
     padding: 0;
 }
 
-.menuItem {
+.menu-item {
     width: inherit;
     height: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-left: var(--borderStyle);
     font: normal bold 1.3rem 'dirooz';
     text-align: center;
+    transition-duration: 0.2s;
+    color: var(--primaryTextColor);
 }
 
-.menuItem:last-child {
+.menu-item:last-child {
     border: none;
 }
 
-.menuToggle {
-    animation: menuAnimate 0.8s ease;
+.menu-item:hover {
+    background: var(--primaryBorderColor);
+    color: rgb(255, 255, 255);
+}
+
+.menu-item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showMenuAnimation {
+    animation: menuAnimate 0.8s ease-in-out;
 }
 
 @keyframes menuAnimate {
