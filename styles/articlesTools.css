@@ -26,6 +26,7 @@
 
 .articleToolContent {
     width: 100%;
+    max-height: 7em;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -41,11 +42,18 @@
     height: 100%;
 }
 
+.articleToolContentImgLink {
+    grid-column: 1/2;
+    grid-row: 1/5;
+}
+
 .articleToolContentImg {
     width: 100%;
     height: 100%;
-    grid-column: 1/2;
-    grid-row: 1/5;
+}
+
+.articleToolContentTitleLink {
+    grid-column: 2/5;
 }
 
 .articleToolContentTitle,
