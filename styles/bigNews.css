@@ -9,20 +9,17 @@
     overflow: hidden;
 }
 
-.bigNewsLink {
-    grid-column: 2/3;
-}
-
-.bigNewsLink:nth-child(1) {
-    grid-column: 1/2;
-    grid-row: 1/3;
-}
-
 .bigNewsItem {
     width: 100%;
     height: 100%;
+    grid-column: 2/3;
     position: relative;
     overflow: hidden;
+}
+
+.bigNewsItem:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/3;
 }
 
 .bigNewsImage {

@@ -41,6 +41,6 @@
         </a>
     </div>
     <div id="copyRight">
-        <p>&copy;<?php echo " ".(date('Y')-1)." – ".date('Y')." ".bloginfo("url"); ?></p>
+        <p dir="ltr"><?php echo "&copy; 20".(date('y')-1)." - 20".date('y')." CopyRight";?></p>
     </div>
 </footer>
