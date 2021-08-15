@@ -138,91 +138,12 @@ while (have_posts()) {
         </div>
         <br>
 
-        <div id="articlesTools">
-            <div class="articleTool">
-                <h1 class="articleToolTitle">مطالب پیشنهادی</h1>
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
+        <?php
+        require("inc/article_tools.php");
+        get_footer();
+        ?>
 
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-            </div>
-            <br>
-
-            <div class="articleTool">
-                <h1 class="articleToolTitle">پر‌بازدید ترین‌ها</h1>
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-
-                <div class="articleToolContent">
-                    <img loading="lazy" src="./Images/car4.jpg" alt="" class="articleToolContentImg">
-                    <h1 class="articleToolContentTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</h1>
-                    <h2 class="articleToolContentDetails">نیما کشاورزیان | 2021-09-12 | تکنولوژی</h2>
-                </div>
-            </div>
-        </div>
-
-
-        <footer id="pageFooter">
-            <div id="categories">
-                <h3>موضوعات</h3>
-                <p id="categoriesName">تکنولوژی / آموزشی / موضوع ۳ / موضوع ۴/ موضوع ۵/</p>
-            </div>
-            <div id="socialMedia">
-                <div class="linkToSocialMedia"></div>
-                <div class="linkToSocialMedia"></div>
-                <div class="linkToSocialMedia"></div>
-                <div class="linkToSocialMedia"></div>
-                <div class="linkToSocialMedia"></div>
-                <div class="linkToSocialMedia"></div>
-            </div>
-        </footer>
-        <script src="./dist/bundle.js"></script>
+        <script src="<?php get_template_directory_uri(); ?>/dist/bundle.js"></script>
     </body>
 
     </html>
