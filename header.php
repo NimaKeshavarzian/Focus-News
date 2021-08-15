@@ -1,7 +1,7 @@
 <header>
     <a id="linkToHead">
         <div id="pageHeader">
-            <h1 id="pageTitle"><?php bloginfo("name"); ?></h1>
+            <h1 id="pageTitle"><a href="<?php bloginfo('home'); ?>"><?php bloginfo("name"); ?></a></h1>
             <div id="pageTools">
                 <svg id="darkModeSwitch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->

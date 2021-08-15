@@ -4,6 +4,7 @@
         "category_name" => "big-news",
         "posts_per_page" => 3
     ));
+    if($bigNewsQuery->have_posts()) {
     while ($bigNewsQuery->have_posts()) {
         $bigNewsQuery->the_post();
     ?>
@@ -15,5 +16,8 @@
         </div>
     <?php
     }
+} else {
+    echo '<h1 class="null">مطلبی برای نمایش وجود ندارد!</h1>';
+}
     ?>
 </div>
