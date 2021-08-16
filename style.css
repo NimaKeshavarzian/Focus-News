@@ -19,6 +19,7 @@ Tags: news, minimal,neomorphism, اخبار, مینیمال, نئومرفیسم
 @import url('./styles/responsive.css');
 :root {
     --primaryColor: rgb(255, 255, 255);
+    --secondaryColor: rgb(54, 89, 192);
     --bgColor: rgb(236, 240, 243);
     --primaryBorderColor: rgba(0, 0, 0, 0.6);
     --borderStyle: 2px solid var(--primaryBorderColor);
@@ -30,7 +31,7 @@ Tags: news, minimal,neomorphism, اخبار, مینیمال, نئومرفیسم
     --newsDetailsColor: var(--primaryBorderColor);
     --articleDetailsColor: rgba(0, 0, 0, 0.7);
     --scrollBarRailColor: rgb(230, 230, 230);
-    --linkFocusColor: rgb(0, 28, 112);
+    --linkFocusColor: var(--secondaryTextColor);
 }
 
 * {

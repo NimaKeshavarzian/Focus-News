@@ -10,69 +10,65 @@ article {
 
 #articleInformation {
     width: 100%;
-    max-height: 70%;
-    position: relative;
-    border-bottom: 1px solid var(--primaryBorderColor);
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     overflow: hidden;
 }
 
-#articleInformation * {
-    width: inherit;
+#postImageContainer {
+    width: 100%;
+    height: auto;
+    max-height: 60%;
+    position: relative;
 }
 
-#articleImageContainer {
-    height: 40%;
+#postImageContainer img {
+    width: 100%;
+    max-height: 100%;
 }
 
-#articleImageContainer img {
-    height: 100%;
-}
-
-#articleCategories {
-    max-height: 4em;
+#postCategories {
+    width: 100%;
+    max-height: 40%;
     position: absolute;
-    top: 52%;
-    display: flex;
-    flex-flow: row;
-    align-items: center;
+    bottom: 1em;
+    padding: 0.25em;
 }
 
-.articleCategory {
-    min-width: 15%;
-    max-width: 25%;
-    height: 1.75em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0.2em;
-    margin-bottom: 0.2em;
-    border-radius: 30px;
-    background: royalblue;
-    font: italic bolder 1.2rem 'dirooz';
+#postCategories .category {
+    width: auto;
+    height: 2em;
+    float: right;
+    margin: 0.25em;
+    background-color: var(--secondaryColor);
+    border-radius: 25px;
+    font: normal bolder 1.4rem 'dirooz';
+    padding: 0.1em 0.4em;
+    text-align: center;
     color: rgb(255, 255, 255);
+    overflow: hidden;
 }
 
 #articleTitle {
-    max-height: 20%;
-    margin-top: 0.3em;
-    font: normal bolder 0.9rem 'dirooz';
+    font: normal bolder 1.6rem 'dirooz';
+    color: var(--primaryTextColor);
 }
 
 #articleDetails {
-    max-height: 10%;
-    font: normal bolder 0.75rem 'dirooz';
-    color: var(--newsDetailsColor);
+    font: normal bolder 1.25rem 'dirooz';
+    color: var(--articleDetailsColor);
 }
 
-#articleDetails h2 {
-    color: var(--newsDetailsColor);
+#Advertising {
+    top: 0;
 }
 
 #articleContent {
     height: auto;
     background: var(--primaryColor);
     position: relative;
-    top: 2.5em;
     display: flex;
     flex-flow: column;
 }

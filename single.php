@@ -51,22 +51,25 @@ while (have_posts()) {
 
         <article>
             <div id="articleInformation">
-                <div id="articleImageContainer">
-                    <img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="News Title">
+                <div id="postImageContainer">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <div id="postCategories">
+                        <?php
+                        $postCategories = get_the_category();
+                        if (!empty($postCategories)) {
+                            foreach ($postCategories as $postCategory) {
+                                if ($postCategory->name == "big-news" || $postCategory->name == "recommended") {
+                                    continue;
+                                } else {
+                                    echo '<div class="category">' . $postCategory->name . '</div>';
+                                }
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
-
-                <div id="articleCategories">
-                    <div class="articleCategory">تکنولوژی</div>
-                    <div class="articleCategory">آموزش</div>
-                    <div class="articleCategory">خودرو</div>
-                </div>
-
-                <div id="articleTitle">
-                    <h1><?php the_title(); ?></h1>
-                </div>
-                <div id="articleDetails">
-                    <h2><?php echo get_the_author() . ' | ' . get_the_date() . ' | ' . get_the_time(); ?></h2>
-                </div>
+                <h1 id="articleTitle"><?php the_title(); ?></h1>
+                <h2 id="articleDetails"><?php echo getPostInfo(); ?></h2>
             </div>
             <div id="Advertising">
                 تبلیغات شما
@@ -143,7 +146,7 @@ while (have_posts()) {
         get_footer();
         ?>
 
-        <script src="<?php get_template_directory_uri(); ?>/dist/bundle.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/dist/bundle.js"></script>
     </body>
 
     </html>
