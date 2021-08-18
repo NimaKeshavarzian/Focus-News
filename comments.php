@@ -1,31 +1,40 @@
 <?php
-if (post_password_required()) return;
-comment_form();
-while (have_comments()) {
-    the_comment();
-?>
-    <div class="comment">
-        <div class="commentHeader">
-            <div class="profileAvatar">
-                <img src="<?php echo get_avatar_url(get_comment_ID());  ?>" alt="نظر">
-                <?php  ?>
-            </div>
-            <div class="profileName">
-                <h1><?php comment_author(); ?></h1>
-            </div>
-            <div class="commentDate">
-                <h2><?php echo get_comment_date() . " | " . get_comment_time(); ?></h2>
-            </div>
-        </div>
-        <div class="commentContent">
-            <p><?php comment_text(); ?></p>
-        </div>
-        <div class="reply">
-            <a href="<?php echo "?replytocom=".get_comment_ID()."#respond"; ?>">
-                <button>پاسخ</button>
-            </a>
-        </div>
-    </div>
-<?php
+if (post_password_required()) {
+    return;
 }
+comment_form();
+
+if (have_comments()) : ?>
+
+    <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
+        <nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+            <h1 class="screen-reader-text"><?php _e('Comment navigation', 'twentyfourteen'); ?></h1>
+            <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'twentyfourteen')); ?></div>
+            <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'twentyfourteen')); ?></div>
+        </nav><!-- #comment-nav-above -->
+    <?php endif; // Check for comment navigation. 
+    ?>
+
+    <ol class="comment-list">
+        <?php
+        wp_list_comments(
+            array(
+                'style'       => 'ol',
+                'short_ping'  => true,
+                'avatar_size' => 40,
+            )
+        );
+        ?>
+    </ol><!-- .comment-list -->
+
+    <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
+        <nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+            <h1 class="screen-reader-text"><?php _e('Comment navigation', 'twentyfourteen'); ?></h1>
+            <div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'twentyfourteen')); ?></div>
+            <div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'twentyfourteen')); ?></div>
+        </nav><!-- #comment-nav-below -->
+    <?php endif; // Check for comment navigation. 
+    ?>
+
+<?php endif; // have_comments() 
 ?>

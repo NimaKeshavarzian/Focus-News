@@ -110,7 +110,7 @@ while (have_posts()) {
             if (comments_open()) {
                 comments_template();
             } else {
-                echo '<h1 class="null">قابلیت ارسال نظر وجود ندارد</h1>';
+                echo '<h2 class="null">قابلیت ارسال نظر وجود ندارد.</h2>';
             }
             ?>
         </div>

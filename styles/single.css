@@ -15,8 +15,6 @@ article {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    position: relative;
-    top: 2.5em;
     overflow: hidden;
 }
 
@@ -81,6 +79,25 @@ article {
     line-height: 2;
     text-align: justify;
 }
+
+
+/* Page Password: */
+
+p input[type="submit"] {
+    background-color: var(--secondaryColor);
+    font: normal bold 1rem 'dirooz';
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+input#pwbox-6 {
+    font: normal bold 0.85rem 'dirooz';
+    border: 2px solid var(--secondaryColor);
+    border-radius: 10px;
+}
+
+
+/* Tags: */
 
 #tagsContainer {
     width: 100%;
