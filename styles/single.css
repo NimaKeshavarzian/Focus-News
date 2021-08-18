@@ -1,3 +1,4 @@
+@import url('./comments.css');
 #pageHeader {
     border-bottom: var(--borderStyle);
 }
@@ -10,10 +11,12 @@ article {
 
 #articleInformation {
     width: 100%;
-    height: auto;
+    max-height: 95vh;
     display: flex;
     flex-flow: column;
     justify-content: center;
+    position: relative;
+    top: 2.5em;
     overflow: hidden;
 }
 
@@ -22,6 +25,7 @@ article {
     height: auto;
     max-height: 60%;
     position: relative;
+    overflow: hidden;
 }
 
 #postImageContainer img {
@@ -61,14 +65,11 @@ article {
     color: var(--articleDetailsColor);
 }
 
-#Advertising {
-    top: 0;
-}
-
 #articleContent {
     height: auto;
     background: var(--primaryColor);
     position: relative;
+    top: 1.2em;
     display: flex;
     flex-flow: column;
 }
@@ -115,110 +116,6 @@ article {
     padding-right: 0.5em;
 }
 
-#commentsContainer {
-    width: 100%;
-    max-height: 60vh;
-    display: flex;
-    flex-flow: column;
-    position: relative;
-    top: 2.5em;
-    margin: auto;
-    overflow-y: scroll;
-    background: var(--primaryColor);
-    border-top: 1px solid var(--primaryBorderColor);
-}
-
-#commentsContainer::-webkit-scrollbar {
-    width: 1em;
-}
-
-#commentsTitleContainer {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font: normal bolder 1.5rem 'b elham';
-}
-
-#commentsTitle {
-    margin-right: 0.3em;
-}
-
-#commentsNumber {
-    margin-left: 0.3em;
-    font-size: 2.75rem;
-    color: var(--newsDetailsColor);
-}
-
-#comments {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.comment {
-    --primaryShadowColor: rgb(245, 245, 245);
-    width: 90%;
-    height: auto;
-    position: relative;
-    margin-bottom: 1em;
-    border-radius: 18px;
-    box-shadow: 6px 6px 5px var(--primaryShadowColor), -3px -3px 5px var(--primaryShadowColor);
-}
-
-.commentHeader {
-    width: 100%;
-    height: 3em;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: repeat(2, 1fr);
-    margin-bottom: 0.75em;
-    border-top-right-radius: 18px;
-    border-top-left-radius: 18px;
-    bottom: 1px solid var(--primaryBorderColor);
-    padding-bottom: 3.5em;
-    border-bottom: 1px solid var(--primaryBorderColor);
-}
-
-.profileAvatar {
-    width: 100%;
-    height: 67%;
-    grid-row: 1/3;
-}
-
-.profileName,
-.commentDate {
-    font: normal bold 0.8rem 'b elham';
-}
-
-.profileName {
-    padding-bottom: 1em;
-}
-
-.commentDate {
-    position: relative;
-    bottom: 1.25em;
-    color: var(--newsDetailsColor);
-}
-
-.commentContent {
-    width: 100%;
-    height: auto;
-    max-height: 9em;
-    overflow-y: scroll;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-}
-
-.commentContent p {
-    font: normal 1.1rem 'dirooz';
-    color: var(--secondaryTextColor);
-    text-align: justify;
-}
-
 .articleTool {
     box-shadow: 2px 2px 20px var(--primaryShadowColor);
 }
@@ -241,7 +138,8 @@ article {
         width: 70%;
     }
     /* Scroll Bar: */
-    .commentContent::-webkit-scrollbar {
+    .commentContent::-webkit-scrollbar,
+    #comment::-webkit-scrollbar {
         width: 1em;
         background: var(--scrollBarRailColor);
         border-bottom-right-radius: 10px;
@@ -250,10 +148,10 @@ article {
     .commentContent {
         scrollbar-width: 1em;
         scrollbar-color: var(--scrollBarRailColor);
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
+        border-radius: 10px;
     }
-    .commentContent::-webkit-scrollbar-thumb {
+    .commentContent::-webkit-scrollbar-thumb,
+    #comment::-webkit-scrollbar-thumb {
         background: var(--primaryColor);
         box-shadow: 2px 2px 20px var(--primaryShadowColor);
         border-radius: 10px;
