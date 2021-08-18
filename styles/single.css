@@ -88,6 +88,7 @@ p input[type="submit"] {
     font: normal bold 1rem 'dirooz';
     color: rgb(255, 255, 255);
     border: none;
+    border-radius: 10px;
 }
 
 input#pwbox-6 {

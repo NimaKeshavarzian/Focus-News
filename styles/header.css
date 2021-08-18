@@ -36,8 +36,6 @@
     align-items: center;
 }
 
-#pageTools img {
-    width: 33.3%;
-    height: 80%;
+#pageTools * {
     cursor: pointer;
 }
