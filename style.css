@@ -72,10 +72,15 @@ svg {
 }
 
 .null {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    height: 10em;
+    position: relative;
+    display: flex;
+    margin: auto;
+    right: 50%;
+    align-items: center;
+    transform: translateX(5%);
     font-family: 'dirooz';
     text-align: center;
     color: var(--secondaryTextColor);

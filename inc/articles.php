@@ -1,8 +1,9 @@
 <div id="articles">
-    <h1 id="articlesTitle">آخرین مطالب</h1>
-
     <?php
     if (have_posts()) {
+        ?>
+    <h1 id="articlesTitle">آخرین مطالب</h1>
+    <?php
         while (have_posts()) {
             the_post();
     ?>

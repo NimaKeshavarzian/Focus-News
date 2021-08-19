@@ -43,4 +43,5 @@
     <div id="copyRight">
         <p dir="ltr"><?php echo "&copy; 20".(date('y')-1)." - 20".date('y')." CopyRight";?></p>
     </div>
+    <?php wp_footer(); ?>
 </footer>

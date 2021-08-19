@@ -13,7 +13,6 @@ while (have_posts()) {
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/style.css" type="text/css" media="all" />
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/styles/single.css">
         <title><?php the_title(); ?></title>
-        <?php wp_head(); ?>
     </head>
 
     <body id="articlePage">
