@@ -144,7 +144,7 @@ input#pwbox-6 {
 
 @media all and (min-width: 750px) {
     article {
-        width: 70%;
+        width: 80%;
         margin: auto;
         border: 1px solid var(--primaryBorderColor);
         border-style: none solid;
@@ -153,7 +153,10 @@ input#pwbox-6 {
         top: 55%;
     }
     #commentsContainer {
-        width: 70%;
+        width: 80%;
+    }
+    .comment {
+        margin-top: 1.5em;
     }
     /* Scroll Bar: */
     .comment-body::-webkit-scrollbar,

@@ -1,0 +1,25 @@
+#notFoundPageContainer {
+    width: 100%;
+    height: calc(100% - 2.5em);
+    display: flex;
+    flex-flow: column;
+    -ms-flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2.5em;
+    background-color: var(--primaryColor);
+    border-top: 3px solid var(--primaryBorderColor);
+}
+
+#notFoundTitle {
+    display: inline;
+    font: normal bolder 18rem 'b elham';
+}
+
+#notFoundDetails {
+    position: relative;
+    bottom: 4em;
+    font: normal bold 1.5rem 'dirooz';
+    color: var(--articleDetailsColor);
+}
