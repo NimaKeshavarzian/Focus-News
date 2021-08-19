@@ -20,21 +20,8 @@ while (have_posts()) {
 
         <?php
         get_header();
+    require("inc/menu.php");
         ?>
-
-        <nav>
-            <div id="menu" class="hidden">
-                <ul id="menuItems">
-                    <li class="menuItem" id="selectedPage">خانه</li>
-                    <li class="menuItem">اخبار</li>
-                    <li class="menuItem">موضوعات</li>
-                    <li class="menuItem">برچسب ها</li>
-                    <li class="menuItem">تالار گفت و گو</li>
-                    <li class="menuItem">درباره ما</li>
-                    <li class="menuItem">ارتباط با ما</li>
-                </ul>
-            </div>
-        </nav>
 
         <div class="hidden" id="searchBox">
             <form method="POST">

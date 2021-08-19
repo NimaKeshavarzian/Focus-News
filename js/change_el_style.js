@@ -11,7 +11,7 @@ var menuElement = document.querySelector("#menuContainer");
 var menuTransmitter = document.querySelector("#menuIcon");
 var menuClasses = ["hidden", "showMenuAnimation"];
 menuTransmitter.addEventListener("click", function() {
-    changeElementCssClass(menuElement, menuClasses)
+    changeElementCssClass(menuElement, menuClasses);
 })
 
 // SHow SearchBox:

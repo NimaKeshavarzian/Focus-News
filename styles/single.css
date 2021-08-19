@@ -156,21 +156,21 @@ input#pwbox-6 {
         width: 70%;
     }
     /* Scroll Bar: */
-    .commentContent::-webkit-scrollbar,
+    .comment-body::-webkit-scrollbar,
     #comment::-webkit-scrollbar {
         width: 1em;
         background: var(--scrollBarRailColor);
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
     }
-    .commentContent {
+    .comment-body {
         scrollbar-width: 1em;
         scrollbar-color: var(--scrollBarRailColor);
-        border-radius: 10px;
     }
-    .commentContent::-webkit-scrollbar-thumb,
+    .comment-body::-webkit-scrollbar-thumb,
     #comment::-webkit-scrollbar-thumb {
         background: var(--primaryColor);
+        border: 1px solid var(--primaryBorderColor);
         box-shadow: 2px 2px 20px var(--primaryShadowColor);
         border-radius: 10px;
     }

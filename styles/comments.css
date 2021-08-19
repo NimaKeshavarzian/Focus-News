@@ -54,7 +54,6 @@
 /* Comment Body: */
 
 .comment {
-    box-shadow: 6px 6px 5px var(--primaryShadowColor);
     list-style: none;
 }
 
@@ -62,11 +61,13 @@
     --primaryShadowColor: rgb(245, 245, 245);
     width: 100%;
     height: auto;
+    max-height: 10em;
     margin: auto;
     margin-bottom: 1em;
     border-radius: 13px;
     box-shadow: 6px 6px 5px var(--primaryShadowColor), -3px -3px 5px var(--primaryShadowColor);
     list-style: none;
+    overflow-y: scroll;
 }
 
 
@@ -102,7 +103,6 @@
 .says {
     font: italic normal 1.1em 'dirooz';
     bottom: 1.6em;
-    right: 0.3em;
 }
 
 
@@ -132,7 +132,7 @@
 
 /* Comment Content: */
 
-.comment-body p {
+.comment-body {
     position: relative;
     bottom: 0.6em;
     font: normal 1.1rem 'dirooz';
@@ -169,6 +169,17 @@
 
 .children .fn {
     font-size: 1.4em;
+}
+
+
+/* Awaiting comments */
+
+em.comment-awaiting-moderation {
+    display: block;
+}
+
+.comment-awaiting-moderation {
+    font: normal 1rem 'dirooz';
 }
 
 
