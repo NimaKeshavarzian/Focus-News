@@ -1,4 +1,5 @@
 #articlesTools {
+    width: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;

@@ -213,6 +213,7 @@ em.comment-awaiting-moderation {
     width: 85%;
     height: 2em;
     margin: auto;
+    border: none;
     transition-duration: 0.4s;
 }
 

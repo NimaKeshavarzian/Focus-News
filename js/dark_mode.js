@@ -1,17 +1,23 @@
 import changeElementCssClass from "./change_el_style";
 
-var isDarkMode = false;
-var body = document.body;
-var darkModeSwitch = document.querySelector("#darkModeSwitch");
+// dom variables
+const body = document.body;
+const darkModeSwitch = document.querySelector("#darkModeSwitch");
+// system Variables
+var isDarkMode = false; // Dark Mode check variable
 
-if (localStorage.getItem("isDarkMode") == true) {
+// change theme function
+function changeTheme() {
+    isDarkMode = !isDarkMode;
+    localStorage.setItem("is-dark-mode", isDarkMode);
+    changeElementCssClass(body, ["dark"]);
+    console.log("Dark Mode function");
+}
+
+// event listener 
+darkModeSwitch.addEventListener("click", changeTheme);
+
+// check mode from local storage
+if (localStorage.getItem("is-dark-mode") == "true") {
     changeTheme();
 }
-
-const changeTheme = () => {
-    isDarkMode = !isDarkMode;
-    localStorage.setItem("isDarkMode", isDarkMode);
-    changeElementCssClass(body, ["dark"]);
-}
-
-darkModeSwitch.addEventListener("click", changeTheme);

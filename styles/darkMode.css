@@ -28,19 +28,24 @@
 
 /* Dark comments: */
 
+.comment-respond input[type="text"],
+.comment-respond textarea {
+    background: var(--bgColor);
+}
+
 .dark #commentsNumber {
     color: rgb(232, 232, 232);
 }
 
-.dark .comment {
+.dark .comment-body {
     --primaryShadowColor: rgb(14, 14, 14);
     box-shadow: 4px 4px 5px var(--primaryShadowColor), -3px -3px 5px var(--primaryShadowColor);
 }
 
-.dark .commentContent::-webkit-scrollbar {
+.dark .comment-body::-webkit-scrollbar {
     background: var(--bgColor);
 }
 
-.dark .commentContent::-webkit-scrollbar-thumb {
+.dark .comment-body::-webkit-scrollbar-thumb {
     box-shadow: none;
 }
