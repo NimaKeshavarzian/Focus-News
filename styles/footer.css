@@ -6,7 +6,7 @@
 
 #pageFooter {
     width: 100%;
-    height: 15em;
+    min-height: 15em;
     position: relative;
     display: flex;
     flex-flow: column;
@@ -73,23 +73,32 @@
 }
 
 
-/* Footer Categories: */
+/* Footer Widgets & Social Media links: */
 
-#footerCategories {
+.footerWidget1,
+.socialMediaLinks {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: none;
     width: 100%;
     height: auto;
     margin-top: 1em;
     text-align: center;
 }
 
-#footerCategories ul {
+.footerWidget1 ul,
+.socialMediaLinks ul {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.category {
+
+/* Footer Widgets: */
+
+.footerWidget1 li {
     display: inline;
     flex: 0.12;
     margin: auto;
@@ -99,16 +108,29 @@
 }
 
 
+/* Social Media Links: */
+
+.socialMediaLinks li {
+    width: 2em;
+    height: 2em;
+    border-radius: 10px;
+    margin: 0.5em;
+    list-style: none;
+    background-color: rgb(31, 31, 31);
+}
+
+
 /* Mail Box: */
 
 #mailBox {
     width: 100%;
+    height: 2em;
     text-align: center;
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
 #mailBox svg {
@@ -130,10 +152,8 @@
 
 #copyRight {
     width: 100%;
-    position: absolute;
-    bottom: 0.1em;
     text-align: center;
-    padding-bottom: 0.4em;
+    margin-top: 0.5em;
 }
 
 #copyRight p {

@@ -19,19 +19,12 @@
         wp_nav_menu($menuArgs);
         ?>
     </div>
-    <div id="footerCategories">
-        <ul>
-            <?php
-            $categories = get_categories();
-            foreach ($categories as $category) {
-                if ($category->name == "big-news" || $category->name == "recommended") continue;
-            ?>
-                <a class="category" href="<?php echo bloginfo("url")."?cat=".$category->cat_ID ?>"><li><?php echo $category->name ?></li></a>
-            <?php
-            }
-            ?>
-        </ul>
-    </div>
+
+    <?php
+     dynamic_sidebar( 'footer-widget' );
+     dynamic_sidebar('social-media-links'); 
+     ?>
+
     <div id="mailBox" dir="ltr">
         <a href="mailto:<?php bloginfo("admin_email"); ?>">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope-open" class="svg-inline--fa fa-envelope-open fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
