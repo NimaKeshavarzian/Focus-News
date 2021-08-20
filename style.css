@@ -42,6 +42,10 @@ Tags: news, minimal,neomorphism, اخبار, مینیمال, نئومرفیسم
     color: var(--primaryTextColor);
 }
 
+html {
+    direction: rtl;
+}
+
 body {
     margin: 0;
     box-sizing: border-box;
@@ -73,17 +77,17 @@ svg {
 
 .null {
     width: 100%;
-    text-align: center;
     height: 10em;
-    position: relative;
     display: flex;
-    margin: auto;
-    right: 50%;
+    justify-content: center;
     align-items: center;
-    transform: translateX(5%);
     font-family: 'dirooz';
     text-align: center;
     color: var(--secondaryTextColor);
+}
+
+#wpadminbar {
+    top: 3em !important;
 }
 
 

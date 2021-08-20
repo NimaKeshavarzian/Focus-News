@@ -26,7 +26,7 @@
             foreach ($categories as $category) {
                 if ($category->name == "big-news" || $category->name == "recommended") continue;
             ?>
-                <li class="category"><?php echo $category->name ?></li>
+                <a class="category" href="<?php echo bloginfo("url")."?cat=".$category->cat_ID ?>"><li><?php echo $category->name ?></li></a>
             <?php
             }
             ?>

@@ -1,13 +1,13 @@
 #notFoundPageContainer {
     width: 100%;
-    height: calc(100% - 2.5em);
+    height: 100%;
     display: flex;
     flex-flow: column;
     -ms-flex-flow: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 2.5em;
+    top: .5em;
     background-color: var(--primaryColor);
     border-top: 3px solid var(--primaryBorderColor);
 }
