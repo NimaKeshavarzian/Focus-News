@@ -1,25 +1,36 @@
+<!-- Ads -->
+<div class="ads">
+    <?php
+    dynamic_sidebar('secondary-ad');
+    ?>
+</div>
+<br>
+
 <div id="articlesTools">
     <div class="articleTool">
-        <h1 class="articleToolTitle">مطالب پیشنهادی</h1>
+        <a href="<?php echo get_category_link(get_cat_ID('مطالب پیشنهادی')); ?>"><h1 class="articleToolTitle">مطالب پیشنهادی</h1></a>
         <?php
         $recommendedArticlesQuery = new WP_Query(array(
             "category_name" => "recommended",
             "posts_per_page" => 5
         ));
-        if ($recommendedArticlesQuery->have_posts()) {
-            while ($recommendedArticlesQuery->have_posts()) {
+        if ($recommendedArticlesQuery->have_posts()) :
+            while ($recommendedArticlesQuery->have_posts()) :
                 $recommendedArticlesQuery->the_post();
         ?>
-                <div class="articleToolContent">
-                    <a class="articleToolContentImgLink" href="<?php the_permalink(); ?>"><img loading="lazy" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="articleToolContentImg"></a>
-                    <a class="articleToolContentTitleLink" href="<?php the_permalink(); ?>"><h1 class="articleToolContentTitle"><?php the_title(); ?></h1></a>
-                    <h2 class="articleToolContentDetails"><?php echo get_the_author() . " | " . get_the_date() . " | " . get_the_time(); ?></h2>
-                </div>
+                <article>
+                    <a href="<?php the_permalink(); ?>" class="titleLink">
+                        <div class="articleToolContent">
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="articleToolContentImg" width="120" height="100" loading="lazy">
+                            <h1 class="articleToolsContentTitle"><?php the_title(); ?></h1>
+                            <h2 class="articleToolsContentDetails"><?php echo getPostInfo(); ?></h2>
+                        </div>
+                    </a>
+                </article>
         <?php
-            }
-        }
+            endwhile;
+        endif;
         ?>
-
     </div>
     <br>
 
@@ -29,11 +40,17 @@
         query_posts('meta_key=post_views_count&showposts=4&orderby=meta_value_num&order=DESC');
         if (have_posts()) : while (have_posts()) : the_post();
         ?>
-        <div class="articleToolContent">
-        <a class="articleToolContentImgLink" href="<?php the_permalink(); ?>"><img loading="lazy" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="articleToolContentImg"></a>
-        <a class="articleToolContentTitleLink" href="<?php the_permalink(); ?>"><h1 class="articleToolContentTitle"><?php the_title(); ?></h1></a>
-            <h2 class="articleToolContentDetails"><?php echo getPostInfo(); ?></h2>
-        </div>
-        <?php endwhile; endif; wp_reset_query(); ?>
+                <article>
+                    <a href="<?php the_permalink(); ?>" class="titleLink">
+                        <div class="articleToolContent">
+                            <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="articleToolContentImg" width="120" height="100" loading="lazy">
+                            <h1 class="articleToolsContentTitle"><?php the_title(); ?></h1>
+                            <h2 class="articleToolsContentDetails"><?php echo getPostInfo(); ?></h2>
+                        </div>
+                    </a>
+                </article>
+        <?php endwhile;
+        endif;
+        wp_reset_query(); ?>
     </div>
 </div>

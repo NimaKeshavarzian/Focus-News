@@ -53,13 +53,6 @@
             ?>
 
         </div>
-        <div id="Advertising">
-            تبلیغات شما
-        </div>
-        <div id="Advertising">
-            تبلیغات شما
-        </div>
-        <br>
 
     </div>
     </div>

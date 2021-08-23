@@ -15,20 +15,16 @@ article {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    border-bottom: 2px solid var(--secondaryTextColor);
     overflow: hidden;
 }
 
 #postImageContainer {
-    width: 100%;
-    height: auto;
-    max-height: 60%;
     position: relative;
-    overflow: hidden;
 }
 
 #postImageContainer img {
     width: 100%;
-    max-height: 100%;
 }
 
 #postCategories {
@@ -49,8 +45,11 @@ article {
     font: normal bolder 1.4rem 'dirooz';
     padding: 0.1em 0.4em;
     text-align: center;
-    color: rgb(255, 255, 255);
     overflow: hidden;
+}
+
+#postCategories .category a {
+    color: rgb(255, 255, 255);
 }
 
 #articleTitle {
@@ -59,8 +58,14 @@ article {
 }
 
 #articleDetails {
+    display: flex;
+    align-items: center;
     font: normal bolder 1.25rem 'dirooz';
     color: var(--articleDetailsColor);
+}
+
+.avatar {
+    margin-left: 0.3em;
 }
 
 #articleContent {

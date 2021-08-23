@@ -15,16 +15,26 @@
             font-size: 1.4rem;
         }
         /* Responsive Big News: */
-        #bigNews {
+        #slider {
             display: flex;
             flex-flow: column;
             justify-content: center;
         }
-        .bigNewsLink {
+        .sliderLink {
             height: 33.3%;
         }
-        .bigNewsTitle {
+        .sliderTitle {
             font-size: 1rem;
+        }
+        /* Responsive Article Tool: */
+        .articleToolContentImg {
+            height: 100%;
+        }
+        .articleToolsContentTitle {
+            font-size: 1rem;
+        }
+        .articleToolsContentDetails {
+            font-size: 0.9rem;
         }
     }
     
@@ -44,33 +54,8 @@
         /* Responsive Advertising: */
         #Advertising {
             top: 1.2em;
+            flex-flow: row;
         }
-        /* Responsive Articles: */
-        .news {
-            width: 85%;
-            height: 18em;
-        }
-        .newsTitle {
-            max-height: 15%;
-            margin-bottom: 0;
-        }
-        .newsDetails {
-            max-height: 10%;
-        }
-        .newsImage {
-            height: 75%;
-        }
-        /* Responsive Article Tool: */
-        #articleTools {
-            display: grid;
-            grid-column: repeat(2, 1fr);
-        }
-        .articleTool {
-            width: 80%;
-        }
-    }
-    
-    @media all and (min-width:800px) {
         /* Responsive Articles: */
         #articles {
             display: grid;
@@ -81,13 +66,26 @@
             grid-column: 1/3;
         }
         .news {
+            width: 85%;
             height: 21em;
+        }
+        .newsImage {
+            height: 75%;
         }
         .newsTitle {
             max-height: 16%;
+            margin-bottom: 0;
         }
         .newsDetails {
             max-height: 9%;
+        }
+        /* Responsive Article Tool: */
+        #articleTools {
+            display: grid;
+            grid-column: repeat(2, 1fr);
+        }
+        .articleTool {
+            width: 80%;
         }
     }
     

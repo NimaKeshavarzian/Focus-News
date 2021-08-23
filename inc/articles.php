@@ -1,3 +1,12 @@
+<!-- Ads -->
+<div class="ads">
+    <?php
+    dynamic_sidebar('main-ad');
+    ?>
+</div>
+<br>
+
+<div id="container">
 <div id="articles">
     <?php
     if (have_posts()) {
@@ -29,3 +38,5 @@
 </div>
 <br>
 </div>
+</div>
+<br>

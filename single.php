@@ -19,7 +19,7 @@ while (have_posts()) {
 
         <?php
         get_header();
-    require("inc/menu.php");
+        require("inc/menu.php");
         ?>
 
         <div class="hidden" id="searchBox">
@@ -38,16 +38,17 @@ while (have_posts()) {
         <article>
             <div id="articleInformation">
                 <div id="postImageContainer">
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" width="350" height="400">
                     <div id="postCategories">
                         <?php
                         $postCategories = get_the_category();
                         if (!empty($postCategories)) {
                             foreach ($postCategories as $postCategory) {
-                                if ($postCategory->name == "big-news" || $postCategory->name == "recommended") {
+                                $catID = get_cat_ID($postCategory->name);
+                                if ($postCategory->name == "اسلاید") {
                                     continue;
                                 } else {
-                                    echo '<div class="category">' . $postCategory->name . '</div>';
+                                    echo '<div class="category"><a href="'.get_category_link($catID).'">'. $postCategory->name . '</a></div>';
                                 }
                             }
                         }
@@ -55,10 +56,14 @@ while (have_posts()) {
                     </div>
                 </div>
                 <h1 id="articleTitle"><?php the_title(); ?></h1>
-                <h2 id="articleDetails"><?php echo getPostInfo(); ?></h2>
+                <h2 id="articleDetails"><?php echo get_avatar(get_the_author_ID(), 46).getPostInfo(); ?></h2>
             </div>
-            <div id="Advertising">
-                تبلیغات شما
+
+            <!-- Ads -->
+            <div class="ads">
+                <?php
+                dynamic_sidebar('main-ad');
+                ?>
             </div>
             <br>
 

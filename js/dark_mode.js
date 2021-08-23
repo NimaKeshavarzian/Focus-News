@@ -11,7 +11,6 @@ function changeTheme() {
     isDarkMode = !isDarkMode;
     localStorage.setItem("is-dark-mode", isDarkMode);
     changeElementCssClass(body, ["dark"]);
-    console.log("Dark Mode function");
 }
 
 // event listener 

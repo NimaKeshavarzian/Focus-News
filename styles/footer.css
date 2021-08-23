@@ -99,7 +99,6 @@
 /* Footer Widgets: */
 
 .footerWidget1 li {
-    display: inline;
     flex: 0.12;
     margin: auto;
     font: normal 0.9rem 'dirooz';
