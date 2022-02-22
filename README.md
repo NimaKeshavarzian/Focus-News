@@ -1,2 +1,2 @@
 # Focus-News
-قالب خبری وردپرس فارسی به صورت مینیمال و زیبا با امکانات کاربردی به جای بمباران کاربر
+A wordpress persian news theme with minimal design
